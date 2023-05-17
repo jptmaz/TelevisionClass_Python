@@ -11,3 +11,12 @@ class tv_controller():
         self.volume = volume
         self.channel = channel
     
+    # Create methods to turn the TV on and OFF
+    def tv_open(self):
+        if self.screen == "ON":
+            print("Tellie is on already, silly!")
+        else:
+            self.screen = "ON":
+                print("The Tellie is now on! What shall we do next?")
+    
+    
