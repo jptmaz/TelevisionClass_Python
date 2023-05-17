@@ -98,5 +98,7 @@ class tv_controller():
                         True
                     else:
                         break
-        
-        
+    
+    # Create a method that lists out the TV status
+    def __str__(self):
+        return """....... TELLIE INFORMATION .......\nTellie is: {}\nTellie's Current Volume: {}\nTellie's Current Channel: {}""".format(self.screen, self.volume, self.channel)
