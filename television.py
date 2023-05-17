@@ -1,5 +1,11 @@
 # Create a class called TV
 class TV_Controller():
+    # Add TV variables
+    max_vol = 100
+    min_vol = 0
+    channel_list = ["RBS", "Hiwaga", "RBS Dula", "RBS Sports", "RBS Balita", "RBS Musika", "RBS Variety"]
+    channel_list = len(channel_list)
+    
     # Create a special init method
     def __init__(self, screen = "OFF", volume = 7 , channel = "RBS"):
         # Set all the instance variables
@@ -21,10 +27,6 @@ class TV_Controller():
             self.screen = "OFF"
             print("Your tellie is closing now.")
     # Create a method to change the volume of the television
-    # Create a method to change the channel the television is on
-    
-    
-    
+    def TV_Change_Volume(self):
         
-    
-    
+    # Create a method to change the channel the television is on
