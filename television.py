@@ -44,12 +44,59 @@ class tv_controller():
                 else:
                     self.volume -= 1
                     print("Volume is now " + self.volume)
-            else:
+            elif volume_command == "r":
                 break
-            
-                
-            
-            
+            else:
+                print("I do not understand would you like to try again? YES or NO?")
+                tryagain_volume = input("= ").upper()
+                if tryagain_volume == "YES":
+                    True
+                elif tryagain_volume == "NO":
+                    break
+                else:
+                    print("I do not understand the command, please input it once more.")
+                    print("Would you like to try again?")
+                    tryagain_volume_errorcommand = input("= ").upper()
+                    if tryagain_volume_errorcommand == "YES":
+                        True
+                    else:
+                        break
+    
+    # Create method to change the channel of the TV
+    def tv_channel(self):
+        while(True):
+            channel_command = input("""\\\\ CHANGE THE CHANNEL ////
+                               Volume + 'UP'
+                               Volume - 'DOWN'
+                               RETURN 'R'""")
+            if channel_command == ">":
+                if self.channel >= max_chan:
+                    print("You have reached the maximum channel")
+                else:
+                    self.volume += 1
+                    print("The channel is now on channel " + self.channel)
+            elif channel_command == "<":
+                if self.channel <= min_chan:
+                    print("You have reached the minimum value")
+                else:
+                    self.volume -= 1
+                    print("The channel is now on channel " + self.channel)
+            elif channel_command == "r":
+                break
+            else:
+                print("I do not understand would you like to try again? YES or NO?")
+                tryagain_channel = input("= ").upper()
+                if tryagain_channel == "YES":
+                    True
+                elif tryagain_channel == "NO":
+                    break
+                else:
+                    print("I do not understand the command, please input it once more.")
+                    print("Would you like to try again?")
+                    tryagain_channel_errorcommand = input("= ").upper()
+                    if tryagain_channel_errorcommand == "YES":
+                        True
+                    else:
+                        break
         
-            
         
