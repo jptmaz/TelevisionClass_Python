@@ -4,4 +4,7 @@ class tv_controller():
     min_vol = 0
     max_chan = 30 
     min_chan = 1
+    # Create a special init method
+    def __init__(self, screen = "OFF", volume = 0, channel = 1):
+
     
