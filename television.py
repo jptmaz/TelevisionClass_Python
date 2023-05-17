@@ -18,5 +18,11 @@ class tv_controller():
         else:
             self.screen = "ON":
                 print("The Tellie is now on! What shall we do next?")
-    
+    def tv_close(self):
+         if self.screen == "OFF":
+            print("Tellie is off already, silly!")
+        else:
+            self.screen = "OFF":
+                print("The Tellie is now off! It's not a good idea to spend so much time watching the Tellie, good job!")
+                
     
