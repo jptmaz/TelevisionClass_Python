@@ -11,6 +11,10 @@ class tv_controller():
         self.volume = volume
         self.channel = channel
     
+        max_vol = 100
+        min_vol = 0
+        max_chan = 30 
+        min_chan = 1
     # Create methods to turn the TV on and OFF
     def tv_open(self):
         if self.screen == "ON":
@@ -28,11 +32,9 @@ class tv_controller():
     # Create method to change the volume of the TV
     def tv_volume(self):
         while(True):
-            volume_command = input("""\\\\ CHANGE THE VOLUME LEVEL ////
-                               Volume + 'UP'
-                               Volume - 'DOWN'
-                               RETURN 'R'""")
-            if volume_command == ">":
+            print(""""\\\\ CHANGE THE VOLUME LEVEL ////\nVolume + 'UP'\nVolume - 'DOWN'\nRETURN 'R'""")
+            volume_command = input("= ")
+            if volume_command == "UP":
                 if self.volume >= max_vol:
                     print("Wah! The Tellie is already at max volume! My ears!")
                 else:
