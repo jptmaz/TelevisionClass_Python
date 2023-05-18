@@ -1,7 +1,5 @@
 # Create a class
 class tv_controller():
-    max_vol = 100
-    min_vol = 0
     max_chan = 30 
     min_chan = 1
     # Create a special init method
@@ -10,11 +8,6 @@ class tv_controller():
         self.screen = screen
         self.volume = volume
         self.channel = channel
-    
-        max_vol = 100
-        min_vol = 0
-        max_chan = 30 
-        min_chan = 1
     # Create methods to turn the TV on and OFF
     def tv_open(self):
         if self.screen == "ON":
@@ -31,6 +24,8 @@ class tv_controller():
     
     # Create method to change the volume of the TV
     def tv_volume(self):
+        max_vol = 100
+        min_vol = 0
         while(True):
             print(""""\\\\ CHANGE THE VOLUME LEVEL ////\nVolume + 'UP'\nVolume - 'DOWN'\nRETURN 'R'""")
             volume_command = input("= ")
