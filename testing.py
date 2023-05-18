@@ -4,7 +4,7 @@ def main():
     TV = tv_controller()
     
     print("""Welcome to Tellie (a.k.a your TELLIEvision, ;) get it?
-          Control your Tellie's system here like you would a remote (Perhaps you lost your remote? Don't worry it happens, look under your couch.)
+Control your Tellie's system here like you would a remote (Perhaps you lost your remote? Don't worry it happens, look under your couch.)
           [[[''''''' TELLIE SYSTEM ''''''']]]
           1. TV ON
           2. TV OFF
@@ -19,12 +19,10 @@ def main():
             TV.tv_open()
         elif remote_command == "2":
             TV.tv_close()
-            print("Tellie shutting down.")
-            break
         elif remote_command == "3":
             TV.tv_volume()
         elif remote_command == "4":
-            TV.tv_channel
+            TV.tv_channel()
         elif remote_command == "5":
             print(TV)
         else:

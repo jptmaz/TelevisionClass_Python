@@ -19,7 +19,7 @@ class tv_controller():
         else:
             self.screen = "OFF"
             print("The Tellie is now off! It's not a good idea to spend so much time watching the Tellie, good job!")
-    
+            
     # Create method to change the volume of the TV
     def tv_volume(self):
         max_vol = 100
@@ -63,19 +63,19 @@ class tv_controller():
         min_chan = 1
         while(True):
             print("\\\\ CHANGE THE CHANNEL ////\nChannel + 'UP'\nChannel - 'DOWN'\nRETURN 'R'")
-            channel_command = input(str("= ")).upper()
-            if channel_command == "UP":
+            channel_command = input("= ").upper()
+            if channel_command == str("UP"):
                 if self.channel >= max_chan:
                     print("You have reached the maximum channel")
                 else:
-                    self.volume += 1
-                    print("The channel is now on channel " + self.channel)
+                    self.channel + 1
+                    print("The channel is now on channel " + str(self.channel))
             elif channel_command == "DOWN":
                 if self.channel <= min_chan:
                     print("You have reached the minimum value")
                 else:
-                    self.volume -= 1
-                    print("The channel is now on channel " + self.channel)
+                    self.channel - 1
+                    print("The channel is now on channel " + str(self.channel))
             elif channel_command == "R":
                 break
             else:
