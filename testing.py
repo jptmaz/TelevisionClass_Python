@@ -19,6 +19,7 @@ Control your Tellie's system here like you would a remote (Perhaps you lost your
             TV.tv_open()
         elif remote_command == "2":
             TV.tv_close()
+            break
         elif remote_command == "3":
             TV.tv_volume()
         elif remote_command == "4":

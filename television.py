@@ -65,16 +65,16 @@ class tv_controller():
             print("\\\\ CHANGE THE CHANNEL ////\nChannel + 'UP'\nChannel - 'DOWN'\nRETURN 'R'")
             channel_command = input("= ").upper()
             if channel_command == str("UP"):
-                if self.channel >= max_chan:
+                if self.channel >= 30:
                     print("You have reached the maximum channel")
                 else:
-                    self.channel + 1
+                    self.channel += 1
                     print("The channel is now on channel " + str(self.channel))
             elif channel_command == "DOWN":
-                if self.channel <= min_chan:
+                if self.channel <= 1:
                     print("You have reached the minimum value")
                 else:
-                    self.channel - 1
+                    self.channel -= 1
                     print("The channel is now on channel " + str(self.channel))
             elif channel_command == "R":
                 break
