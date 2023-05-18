@@ -1,7 +1,5 @@
 # Create a class
 class tv_controller():
-    max_chan = 30 
-    min_chan = 1
     # Create a special init method
     def __init__(self, screen = "OFF", volume = 0, channel = 1):
         # Select all instance variables
@@ -28,20 +26,20 @@ class tv_controller():
         min_vol = 0
         while(True):
             print(""""\\\\ CHANGE THE VOLUME LEVEL ////\nVolume + 'UP'\nVolume - 'DOWN'\nRETURN 'R'""")
-            volume_command = input("= ")
-            if volume_command == "UP":
+            volume_command = input("= ").upper()
+            if volume_command == str("UP"):
                 if self.volume >= max_vol:
                     print("Wah! The Tellie is already at max volume! My ears!")
                 else:
                     self.volume += 1
-                    print("Volume is now " + self.volume)
-            elif volume_command == "<":
+                    print("Volume is now " + str(self.volume))
+            elif volume_command == "DOWN":
                 if self.volume <= min_vol:
                     print("The Tellie is already at min volume! I can't hear a thing.")
                 else:
                     self.volume -= 1
-                    print("Volume is now " + self.volume)
-            elif volume_command == "r":
+                    print("Volume is now " + str(self.volume))
+            elif volume_command == "R":
                 break
             else:
                 print("I do not understand would you like to try again? YES or NO?")
@@ -61,24 +59,24 @@ class tv_controller():
     
     # Create method to change the channel of the TV
     def tv_channel(self):
+        max_chan = 30 
+        min_chan = 1
         while(True):
-            channel_command = input("""\\\\ CHANGE THE CHANNEL ////
-                               Volume + 'UP'
-                               Volume - 'DOWN'
-                               RETURN 'R'""")
-            if channel_command == ">":
+            print("\\\\ CHANGE THE CHANNEL ////\nChannel + 'UP'\nChannel - 'DOWN'\nRETURN 'R'")
+            channel_command = input(str("= ")).upper()
+            if channel_command == "UP":
                 if self.channel >= max_chan:
                     print("You have reached the maximum channel")
                 else:
                     self.volume += 1
                     print("The channel is now on channel " + self.channel)
-            elif channel_command == "<":
+            elif channel_command == "DOWN":
                 if self.channel <= min_chan:
                     print("You have reached the minimum value")
                 else:
                     self.volume -= 1
                     print("The channel is now on channel " + self.channel)
-            elif channel_command == "r":
+            elif channel_command == "R":
                 break
             else:
                 print("I do not understand would you like to try again? YES or NO?")
